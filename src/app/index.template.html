@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="{{ htmlLang }}" data-vue-meta-server-rendered {{{ meta.inject().htmlAttrs.text() }}}>
+<html <% if (htmlWebpackPlugin.options.spa) { %>lang="en"<% } else { %>lang="{{ htmlLang }}" data-vue-meta-server-rendered {{{ meta.inject().htmlAttrs.text() }}}<% } %>>
 <head>
-  {{{ meta.inject().meta.text() }}}
+  <% if (!htmlWebpackPlugin.options.spa) { %>{{{ meta.inject().meta.text() }}}
   {{{ meta.inject().title.text() }}}
   {{{ meta.inject().link.text() }}}
   {{{ meta.inject().style.text() }}}
   {{{ meta.inject().script.text() }}}
-  {{{ meta.inject().noscript.text() }}}
+  {{{ meta.inject().noscript.text() }}}<% } %>
   <meta charset="utf-8">
   <title>vue-starter</title>
   <meta name="mobile-web-app-capable" content="yes">
@@ -29,6 +29,6 @@
   <link rel="<%= chunk.initial?'preload':'prefetch' %>" href="<%= htmlWebpackPlugin.files.publicPath + file %>" as="<%= file.match(/\.css$/)?'style':'script' %>"><% }}} %>
 </head>
 <body>
-<!--vue-ssr-outlet-->
+<% if (htmlWebpackPlugin.options.spa) { %><div id="app"></div><% } else { %><!--vue-ssr-outlet--><% } %>
 </body>
 </html>
