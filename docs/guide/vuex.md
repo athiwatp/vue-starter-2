@@ -5,7 +5,7 @@ This boilerplate comes with a vuex middleware that allows you to persist the app
 
 ## Cookie Persist
 
-file: `/src/app/store.ts`:
+File: `./src/app/store.ts`:
 ```js
   const persistCookieStorage: PersistCookieStorage = new PersistCookieStorage(
     ['app', 'counter'],
@@ -22,9 +22,9 @@ file: `/src/app/store.ts`:
   );
 ```
 
-This can be used, for example, to store an access token in a cookie so you can use the access token for api calls on the server and server-side-render the app.
+This can be used, for example, to store an access token in a cookie that can be used later for api calls to server-side-render the app.
 
-following part in `/src/server/isomorphic.ts` is responsible for extracting the cookie data and pass it into the initial state of the app.
+Following part in `/src/server/isomorphic.ts` is responsible for extracting the cookie data and pass it into the initial state of the app.
 
 ```js
     /**
@@ -46,7 +46,7 @@ following part in `/src/server/isomorphic.ts` is responsible for extracting the 
 
 ## Localstorage Persist
 
-file: `/src/app/store.ts`:
+File: `./src/app/store.ts`:
 ```js
   return store = new Vuex.Store(
     {
@@ -65,4 +65,5 @@ file: `/src/app/store.ts`:
     },
   );
 ```
+
 This will save the `auth` and `tracking` module in the LocalStorage and hydrates the state back into the initial state before the client side app takes over.
