@@ -26,7 +26,7 @@ _If you want to save some time and to keep the style guide consistent, it is rec
 │   │   ├── router.ts               // combined routes, including all modules
 │   │   ├── shared                  // component, modules, plugins that are dependencies for more than one module
 │   │   └── store.ts                // vuex-store set up
-│   ├── assets                      // assets, served by express static middleware
+│   ├── static                      // files served by express static middleware
 │   ├── client                      // entry point for client application
 │   └── server                      // express server that handles server-side-rendering
 └── tools

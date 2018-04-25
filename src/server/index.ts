@@ -3,9 +3,8 @@ import { Request, Response } from 'express';
 import { Logger }            from './utils/Logger';
 import { serve }             from './utils/Utils';
 import { applyMiddlewares }  from './middlewares';
+import { StaticRoutes }      from './routes/StaticRoutes';
 import { CounterRoutes }     from './routes/CounterRoutes';
-import { AssetRoutes }       from './routes/AssetRoutes';
-import { PWARoutes }         from './routes/PWARoutes';
 import { SSRRoutes }         from './routes/SSRRoutes';
 
 const app: Express.Application = Express();
@@ -39,9 +38,8 @@ app.get('*', (req: Request, res: Response, next: any) => {
  */
 app.use('/storybook', serve('../../storybook-static'));
 
+StaticRoutes(app);
 CounterRoutes(app);
-AssetRoutes(app);
-PWARoutes(app);
 SSRRoutes(app);
 
 app.listen(port, () => {

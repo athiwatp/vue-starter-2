@@ -40,7 +40,7 @@
           name:    'og:description',
           content: 'vue-starter - an enterprise ready boilerplate for isomorphic, progressive web apps built with Vue.JS',
         },
-        { name: 'og:image:url', content: 'https://vue-starter.herokuapp.com/assets/logo.png' },
+        { name: 'og:image:url', content: 'https://vue-starter.herokuapp.com/logo.png' },
 
         { name: 'twitter:card', content: 'summary' },
         { name: 'twitter:site', content: '@_jwerner_' },
@@ -50,7 +50,7 @@
           content: 'vue-starter - an enterprise ready boilerplate for isomorphic, progressive web apps built with Vue.JS',
         },
         { name: 'twitter:url', content: 'https://vue-starter.herokuapp.com/' },
-        { name: 'twitter:image', content: 'https://vue-starter.herokuapp.com/assets/logo.png' },
+        { name: 'twitter:image', content: 'https://vue-starter.herokuapp.com/logo.png' },
         {
           name:    'twitter:description',
           content: 'vue-starter - an enterprise ready boilerplate for isomorphic, progressive web apps built with Vue.JS',

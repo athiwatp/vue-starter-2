@@ -152,7 +152,8 @@
 
           <vue-check-box name="check" label="checkbox" :checked="checked" @click="checked = !checked" />
           <br />
-          <vue-check-box name="check2" label="checkbox" :checked="checked" @click="checked = !checked" :disabled="true" />
+          <vue-check-box name="check2" label="checkbox" :checked="checked" @click="checked = !checked"
+                         :disabled="true" />
           <br />
           <br />
           <vue-check-box name="radio" label="radio" :checked="radio === 'radio1'" radio @click="radio = 'radio1'" />
@@ -415,7 +416,7 @@
           name:    'og:description',
           content: 'vue-starter - includes most common UI/UX use cases, for example: calendar, date picker, range slider, accordion and more!',
         },
-        { name: 'og:image:url', content: 'https://vue-starter.herokuapp.com/assets/logo.png' },
+        { name: 'og:image:url', content: 'https://vue-starter.herokuapp.com/logo.png' },
 
         { name: 'twitter:card', content: 'summary' },
         { name: 'twitter:site', content: '@_jwerner_' },
@@ -425,7 +426,7 @@
           content: 'vue-starter - includes most common UI/UX use cases, for example: calendar, date picker, range slider, accordion and more!',
         },
         { name: 'twitter:url', content: 'https://vue-starter.herokuapp.com/' },
-        { name: 'twitter:image', content: 'https://vue-starter.herokuapp.com/assets/logo.png' },
+        { name: 'twitter:image', content: 'https://vue-starter.herokuapp.com/logo.png' },
         {
           name:    'twitter:description',
           content: 'vue-starter - includes most common UI/UX use cases, for example: calendar, date picker, range slider, accordion and more!',
